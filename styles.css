@@ -36,6 +36,60 @@
     top: 45vw;
 }
 
+#indstillinger_borad{
+    background-image: url(produktion/indstillinger_borad.svg);
+    background-size: 100%;
+    width: 70vw;
+    height: 50vw;
+    left: 15vw;
+    top: 10vw;
+    position: absolute;
+}
+
+#forlad{
+    background-image: url(produktion/forlad.svg);
+    background-size: 100%;
+    width: 30vw;
+    height: 8vw;
+    left: 34vw;
+    top: 20vw;
+    position: absolute;
+    display: none;
+}
+
+#lyd_fra{
+    background-image: url(produktion/lyd_fra.svg);
+    background-size: 100%;
+    width: 45vw;
+    height: 10vw;
+    left: 30.5vw;
+    top: 28vw;
+    position: absolute;
+    display: none;
+}
+
+#lyd_til{
+    background-image: url(produktion/lyd_til.svg);
+    background-size: 100%;
+    width: 46vw;
+    height: 13vw;
+    left: 28.8vw;
+    top: 25.1vw;
+    position: absolute;
+    display: none;
+}
+
+#spil_igen{
+    background-image: url(produktion/spil_igen.svg);
+    background-size: 100%;
+    width: 28.8vw;
+    height: 8vw;
+    left: 34.7vw;
+    top: 37vw;
+    position: absolute;
+    display: none;
+}
+
 
 #spille_baggrund {
     background-image: url(produktion/spille_baggrund.svg);
@@ -43,7 +97,7 @@
     width: 100vw;
     height: 56.25vw;
     margin: auto;
-    /*        display: none;*/
+/*    display: none;*/
 }
 
 
@@ -65,7 +119,6 @@
     position: absolute;
     transform: translateX(35.5vw) translateY(19vw);
 
-
 }
 
 .forsvind1{
@@ -81,7 +134,7 @@
 
     }
 
-    100%{transform: translateX(-10vw) translateY(19vw);
+    100%{transform: translateX(-300vw) translateY(200vw);
 
     }
 
@@ -121,8 +174,26 @@
     width: 8vw;
     height: 5vw;
     position: absolute;
-    left: 42vw;
-    top: 12vw;
+    transform: translateX(40vw) translateY(12.5vw);
+
+}
+
+.forsvind3{
+    animation-name: forsvind3;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes forsvind3{
+
+    0%{transform: translateX(50vw) translateY(27vw);
+
+    }
+
+    100%{transform: translateX(250vw) translateY(27vw);
+
+    }
 
 }
 
@@ -132,9 +203,26 @@
     width: 5vw;
     height: 4vw;
     position: absolute;
-    left: 48vw;
-    top: 23vw;
-    transform:rotateZ(45deg);
+    transform: translateX(48vw) translateY(23vw) rotateZ(45deg);
+}
+
+.forsvind4{
+    animation-name: forsvind4;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes forsvind4{
+
+    0%{transform: translateX(48vw) translateY(23vw);
+
+    }
+
+    100%{transform: translateY(-150vw)translateY(27vw);
+
+    }
+
 }
 
 #hor5 {
@@ -143,30 +231,26 @@
     width: 5vw;
     height: 5vw;
     position: absolute;
-    left: 31vw;
-    top: 28vw;
-    transform:rotateZ(-70deg);
+   transform: translateX(31vw) translateY(28vw) rotateZ(-70deg);
 
 }
-
-
-.forsvind {
-    animation-name: forsvind_kf;
-    animation-duration: 2s;
+.forsvind5{
+    animation-name: forsvind5;
+    animation-duration: 3s;
     animation-iteration-count: 1;
-    animation-timing-function: ease-out;
-
-
+    animation-timing-function: linear;
 }
 
-@keyframes slide_kf {
-    0% {
-        transform: translateX(2vw)
+@keyframes forsvind5{
+
+    0%{transform: translateX(31vw) translateY(28vw);
+
     }
 
-    100% {
-        transform: translateX(-25vw)
+    100%{transform: translateY(-150vw)translateY(27vw);
+
     }
+
 }
 
 #tunge {
@@ -255,7 +339,6 @@
     animation-iteration-count: 1;
     animation-timing-function: linear;
 
-
 }
 
 @keyframes slide_kf {
@@ -267,3 +350,164 @@
         transform: translateX(-25vw)
     }
 }
+
+#tillykke{
+    background-image: url(produktion/tillykke.svg);
+    background-size: 100%;
+    width: 70vw;
+    height: 50vw;
+    left: 15vw;
+    top: 10vw;
+    position: absolute;
+    display: none;
+}
+
+#forlad1{
+    background-image: url(produktion/forlad.svg);
+    background-size: 100%;
+    width: 30vw;
+    height: 8vw;
+    left: 17vw;
+    top: 14vw;
+    position: absolute;
+}
+
+#lyd_fra1{
+    background-image: url(produktion/lyd_fra.svg);
+    background-size: 100%;
+    width: 45vw;
+    height: 10vw;
+    left: 14vw;
+    top: 20vw;
+    position: absolute;
+/*    display: none;*/
+}
+
+#lyd_til1{
+    background-image: url(produktion/lyd_til.svg);
+    background-size: 100%;
+    width: 46vw;
+    height: 13vw;
+    left: 12vw;
+    top: 17.8vw;
+    position: absolute;
+    display: none;
+}
+
+#spil_igen1{
+    background-image: url(produktion/spil_igen.svg);
+    background-size: 100%;
+    width: 28.8vw;
+    height: 8vw;
+    left: 18vw;
+    top: 29vw;
+    position: absolute;
+}
+
+#game_over1{
+    background-image: url(produktion/tillykke.svg);
+    background-size: 100%;
+    width: 70vw;
+    height: 50vw;
+    left: 15vw;
+    top: 10vw;
+    position: absolute;
+    display: none;
+}
+
+#forlad2{
+    background-image: url(produktion/forlad.svg);
+    background-size: 100%;
+    width: 30vw;
+    height: 8vw;
+    left: 17vw;
+    top: 14vw;
+    position: absolute;
+}
+
+#lyd_fra2{
+    background-image: url(produktion/lyd_fra.svg);
+    background-size: 100%;
+    width: 45vw;
+    height: 10vw;
+    left: 14vw;
+    top: 20vw;
+    position: absolute;
+/*    display: none;*/
+}
+
+#lyd_til2{
+    background-image: url(produktion/lyd_til.svg);
+    background-size: 100%;
+    width: 46vw;
+    height: 13vw;
+    left: 12vw;
+    top: 17.8vw;
+    position: absolute;
+    display: none;
+}
+
+#spil_igen2{
+    background-image: url(produktion/spil_igen.svg);
+    background-size: 100%;
+    width: 28.8vw;
+    height: 8vw;
+    left: 18vw;
+    top: 29vw;
+    position: absolute;
+}
+
+#game_over2{
+    background-image: url(produktion/tillykke.svg);
+    background-size: 100%;
+    width: 70vw;
+    height: 50vw;
+    left: 15vw;
+    top: 10vw;
+    position: absolute;
+    display: none;
+}
+
+#forlad3{
+    background-image: url(produktion/forlad.svg);
+    background-size: 100%;
+    width: 30vw;
+    height: 8vw;
+    left: 17vw;
+    top: 14vw;
+    position: absolute;
+}
+
+#lyd_fra3{
+    background-image: url(produktion/lyd_fra.svg);
+    background-size: 100%;
+    width: 45vw;
+    height: 10vw;
+    left: 14vw;
+    top: 20vw;
+    position: absolute;
+/*    display: none;*/
+}
+
+#lyd_til3{
+    background-image: url(produktion/lyd_til.svg);
+    background-size: 100%;
+    width: 46vw;
+    height: 13vw;
+    left: 12vw;
+    top: 17.8vw;
+    position: absolute;
+    display: none;
+}
+
+#spil_igen3{
+    background-image: url(produktion/spil_igen.svg);
+    background-size: 100%;
+    width: 28.8vw;
+    height: 8vw;
+    left: 18vw;
+    top: 29vw;
+    position: absolute;
+}
+
+
