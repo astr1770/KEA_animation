@@ -1,9 +1,27 @@
+#screen {
+    position: relative;
+    width: 100vw;
+    height: 56.25vw;
+
+    margin: 0 auto;
+}
+
+#menu_baggrund {
+    background-image: url(produktion/menu_baggrund.svg);
+    background-size: 100%;
+    width: 100vw;
+    height: 56.25vw;
+    margin: auto;
+    /*    display:none;*/
+}
+
 #spille_baggrund {
     background-image: url(produktion/spille_baggrund.svg);
     background-size: 100%;
-    width: 80vw;
-    height: 45vw;
+    width: 100vw;
+    height: 56.25vw;
     margin: auto;
+    display: none;
 }
 
 
@@ -58,6 +76,7 @@
     position: absolute;
     left: 42vw;
     top: 18.2vw;
+    display: none;
 }
 
 #tander {
@@ -68,6 +87,7 @@
     position: absolute;
     left: 42vw;
     top: 19vw;
+    display: none;
 }
 
 #bryn {
@@ -129,3 +149,20 @@
     left: 39vw;
     top: 40vw;
 }
+
+#menu_baggrund {
+    background-image: url(produktion/menu_baggrund.svg);
+    background-size: 100%;
+    width: 100vw;
+    height: 56.25vw;
+    margin: auto;
+}
+
+#spil {
+    background-image: url(produktion/spil.svg);
+    background-size: 100%;
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    left: 32vw;
+    top: 30vw;
