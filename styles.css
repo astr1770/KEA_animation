@@ -12,8 +12,30 @@
     width: 100vw;
     height: 56.25vw;
     margin: auto;
-    /*    display:none;*/
+    display: none;
 }
+
+#spil {
+    background-image: url(produktion/spil.svg);
+    background-size: 100%;
+    width: 33vw;
+    height: 20vw;
+    position: absolute;
+    left: 32vw;
+    top: 34vw;
+    display: none;
+}
+
+#indstillinger {
+    background-image: url(produktion/indstillinger.svg);
+    background-size: 100%;
+    width: 12vw;
+    height: 11vw;
+    position: absolute;
+    left: 88vw;
+    top: 45vw;
+}
+
 
 #spille_baggrund {
     background-image: url(produktion/spille_baggrund.svg);
@@ -21,50 +43,50 @@
     width: 100vw;
     height: 56.25vw;
     margin: auto;
-    display: none;
+    /*        display: none;*/
 }
 
 
 #hund {
     background-image: url(produktion/hund.svg);
     background-size: 100%;
-    width: 30vw;
+    width: 34vw;
     height: 30vw;
     position: absolute;
-    left: 30vw;
-    top: 7vw;
+    left: 27vw;
+    top: 10.5vw;
 }
 
 #hor1 {
     background-image: url(produktion/hor1.svg);
     background-size: 100%;
-    width: 10vw;
+    width: 11vw;
     height: 8vw;
     position: absolute;
-    left: 35vw;
-    top: 21vw;
+    left: 34vw;
+    top: 19vw;
 
 }
 
 #hor2 {
     background-image: url(produktion/hor2.svg);
     background-size: 100%;
-    width: 5vw;
-    height: 4vw;
+    width: 6vw;
+    height: 5vw;
     position: absolute;
-    left: 50.5vw;
-    top: 25vw;
+    left: 50vw;
+    top: 27vw;
 
 }
 
 #hor3 {
     background-image: url(produktion/hor3.svg);
     background-size: 100%;
-    width: 7vw;
+    width: 8vw;
     height: 5vw;
     position: absolute;
-    left: 43vw;
-    top: 10vw;
+    left: 42vw;
+    top: 12vw;
 
 }
 
@@ -74,20 +96,18 @@
     width: 7vw;
     height: 5vw;
     position: absolute;
-    left: 42vw;
-    top: 18.2vw;
-    display: none;
+    left: 41.2vw;
+    top: 23.3vw;
 }
 
 #tander {
     background-image: url(produktion/tander.svg);
     background-size: 100%;
-    width: 9vw;
+    width: 10vw;
     height: 3vw;
     position: absolute;
     left: 42vw;
     top: 19vw;
-    display: none;
 }
 
 #bryn {
@@ -96,28 +116,28 @@
     width: 9vw;
     height: 3vw;
     position: absolute;
-    left: 40.7vw;
-    top: 12.5vw;
+    left: 40vw;
+    top: 17vw;
 }
 
 #tid {
     background-image: url(produktion/tid.svg);
     background-size: 100%;
-    width: 30vw;
+    width: 35vw;
     height: 7vw;
     position: absolute;
-    left: 58vw;
-    top: 0.5vw;
+    left: 60vw;
+    top: 0vw;
 }
 
 #hjerte {
     background-image: url(produktion/hjerte.svg);
     background-size: 100%;
-    width: 8vw;
+    width: 9vw;
     height: 7vw;
     position: absolute;
-    left: 11vw;
-    top: 0.8vw;
+    left: 3vw;
+    top: 0.5vw;
 }
 
 #point {
@@ -126,43 +146,47 @@
     width: 3vw;
     height: 4vw;
     position: absolute;
-    left: 13vw;
+    left: 5.5vw;
     top: 2.6vw;
-}
-
-#indstillinger {
-    background-image: url(produktion/indstillinger.svg);
-    background-size: 100%;
-    width: 9vw;
-    height: 8vw;
-    position: absolute;
-    left: 82vw;
-    top: 38vw;
 }
 
 #kodben {
     background-image: url(produktion/kodben.svg);
     background-size: 100%;
-    width: 10vw;
-    height: 5vw;
+    width: 16vw;
+    height: 8vw;
     position: absolute;
-    left: 39vw;
-    top: 40vw;
+    left: 35vw;
+    top: 47vw;
 }
 
-#menu_baggrund {
-    background-image: url(produktion/menu_baggrund.svg);
-    background-size: 100%;
-    width: 100vw;
-    height: 56.25vw;
-    margin: auto;
+#tidslinje {
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 26px;
+    width: 4px;
+    left: 90vw;
+    top: 1.9vw;
+    position: absolute;
+    border: 2px solid #ffffff;
+    padding: 1px;
+    border-radius: 25px;
 }
 
-#spil {
-    background-image: url(produktion/spil.svg);
-    background-size: 100%;
-    width: 30vw;
-    height: 20vw;
-    position: absolute;
-    left: 32vw;
-    top: 30vw;
+.slide {
+    animation-name: slide_kf;
+    animation-duration: 20s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+
+
+}
+
+@keyframes slide_kf {
+    0% {
+        transform: translateX(2vw)
+    }
+
+    100% {
+        transform: translateX(-25vw)
+    }
+}
