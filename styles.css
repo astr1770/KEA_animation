@@ -60,11 +60,30 @@
 #hor1 {
     background-image: url(produktion/hor1.svg);
     background-size: 100%;
-    width: 11vw;
-    height: 8vw;
+    width: 8vw;
+    height: 6vw;
     position: absolute;
-    left: 34vw;
-    top: 19vw;
+    transform: translateX(35.5vw) translateY(19vw);
+
+
+}
+
+.forsvind1{
+    animation-name: forsvind1;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes forsvind1{
+
+    0%{transform: translateX(35.5vw) translateY(19vw);
+
+    }
+
+    100%{transform: translateX(-10vw) translateY(19vw);
+
+    }
 
 }
 
@@ -74,8 +93,25 @@
     width: 6vw;
     height: 5vw;
     position: absolute;
-    left: 50vw;
-    top: 27vw;
+    transform: translateX(50vw) translateY(27vw);
+
+}
+.forsvind2{
+    animation-name: forsvind2;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes forsvind2{
+
+    0%{transform: transform: translateX(50vw) translateY(27vw);
+
+    }
+
+    100%{transform: translateX(250vw) translateY(-27vw);
+
+    }
 
 }
 
@@ -88,6 +124,49 @@
     left: 42vw;
     top: 12vw;
 
+}
+
+#hor4 {
+    background-image: url(produktion/hor3.svg);
+    background-size: 100%;
+    width: 5vw;
+    height: 4vw;
+    position: absolute;
+    left: 48vw;
+    top: 23vw;
+    transform:rotateZ(45deg);
+}
+
+#hor5 {
+    background-image: url(produktion/hor2.svg);
+    background-size: 100%;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    left: 31vw;
+    top: 28vw;
+    transform:rotateZ(-70deg);
+
+}
+
+
+.forsvind {
+    animation-name: forsvind_kf;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+
+
+}
+
+@keyframes slide_kf {
+    0% {
+        transform: translateX(2vw)
+    }
+
+    100% {
+        transform: translateX(-25vw)
+    }
 }
 
 #tunge {
