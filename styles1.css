@@ -60,6 +60,26 @@
     top: 18.2vw;
 }
 
+#tander {
+    background-image: url(produktion/tander.svg);
+    background-size: 100%;
+    width: 9vw;
+    height: 3vw;
+    position: absolute;
+    left: 42vw;
+    top: 19vw;
+}
+
+#bryn {
+    background-image: url(produktion/bryn.svg);
+    background-size: 100%;
+    width: 9vw;
+    height: 3vw;
+    position: absolute;
+    left: 40.7vw;
+    top: 12.5vw;
+}
+
 #tid {
     background-image: url(produktion/tid.svg);
     background-size: 100%;
