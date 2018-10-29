@@ -161,20 +161,18 @@
 }
 
 #tidslinje {
-    background-color: rgba(0, 0, 0, 0.85);
-    height: 26px;
-    width: 4px;
-    left: 90vw;
-    top: 1.9vw;
+    background-image: url(produktion/tidslinje.svg);
+    background-size: 100%;
+    width: 2vw;
+    height: 5vw;
+    left: 91vw;
+    top: 1.8vw;
     position: absolute;
-    border: 2px solid #ffffff;
-    padding: 1px;
-    border-radius: 25px;
 }
 
 .slide {
     animation-name: slide_kf;
-    animation-duration: 20s;
+    animation-duration: 30s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
 
