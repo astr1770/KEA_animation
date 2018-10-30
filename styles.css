@@ -1,18 +1,73 @@
 #screen {
-    position: relative;
     width: 100vw;
     height: 56.25vw;
+    background-color: pink;
 
-    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+    /*  touch-action: none;*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-#menu_baggrund {
+/* effekter */
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.blur {
+    filter: blur(5px) brightness(80%);
+}
+
+.fade_out {
+    animation-name: fadeout_kf;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout_kf {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.pulse {
+    animation-name: pulse_kf;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(0.90);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#start {
     background-image: url(produktion/menu_baggrund.svg);
     background-size: 100%;
     width: 100vw;
     height: 56.25vw;
-    margin: auto;
-    display: none;
+    position: absolute;
+    background-color: rgba(240, 248, 255, 0.75);
 }
 
 #spil {
@@ -23,7 +78,6 @@
     position: absolute;
     left: 32vw;
     top: 34vw;
-    display: none;
 }
 
 #indstillinger {
@@ -36,7 +90,7 @@
     top: 45vw;
 }
 
-#indstillinger_borad{
+#indstillinger_borad {
     background-image: url(produktion/indstillinger_borad.svg);
     background-size: 100%;
     width: 70vw;
@@ -44,9 +98,10 @@
     left: 15vw;
     top: 10vw;
     position: absolute;
+    display: none;
 }
 
-#forlad{
+#forlad {
     background-image: url(produktion/forlad.svg);
     background-size: 100%;
     width: 30vw;
@@ -57,7 +112,7 @@
     display: none;
 }
 
-#lyd_fra{
+#lyd_fra {
     background-image: url(produktion/lyd_fra.svg);
     background-size: 100%;
     width: 45vw;
@@ -68,7 +123,7 @@
     display: none;
 }
 
-#lyd_til{
+#lyd_til {
     background-image: url(produktion/lyd_til.svg);
     background-size: 100%;
     width: 46vw;
@@ -79,7 +134,7 @@
     display: none;
 }
 
-#spil_igen{
+#spil_igen {
     background-image: url(produktion/spil_igen.svg);
     background-size: 100%;
     width: 28.8vw;
@@ -97,7 +152,7 @@
     width: 100vw;
     height: 56.25vw;
     margin: auto;
-/*    display: none;*/
+    display: none;
 }
 
 
@@ -121,20 +176,22 @@
 
 }
 
-.forsvind1{
+.forsvind1 {
     animation-name: forsvind1;
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
 }
 
-@keyframes forsvind1{
+@keyframes forsvind1 {
 
-    0%{transform: translateX(35.5vw) translateY(19vw);
+    0% {
+        transform: translateX(35.5vw) translateY(19vw);
 
     }
 
-    100%{transform: translateX(-300vw) translateY(200vw);
+    100% {
+        transform: translateX(-300vw) translateY(200vw);
 
     }
 
@@ -149,20 +206,23 @@
     transform: translateX(50vw) translateY(27vw);
 
 }
-.forsvind2{
+
+.forsvind2 {
     animation-name: forsvind2;
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
 }
 
-@keyframes forsvind2{
+@keyframes forsvind2 {
 
-    0%{transform: transform: translateX(50vw) translateY(27vw);
+    0% {
+        transform: transform: translateX(50vw) translateY(27vw);
 
     }
 
-    100%{transform: translateX(250vw) translateY(-27vw);
+    100% {
+        transform: translateX(250vw) translateY(-27vw);
 
     }
 
@@ -178,20 +238,22 @@
 
 }
 
-.forsvind3{
+.forsvind3 {
     animation-name: forsvind3;
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
 }
 
-@keyframes forsvind3{
+@keyframes forsvind3 {
 
-    0%{transform: translateX(50vw) translateY(27vw);
+    0% {
+        transform: translateX(50vw) translateY(27vw);
 
     }
 
-    100%{transform: translateX(250vw) translateY(27vw);
+    100% {
+        transform: translateX(250vw) translateY(27vw);
 
     }
 
@@ -206,20 +268,22 @@
     transform: translateX(48vw) translateY(23vw) rotateZ(45deg);
 }
 
-.forsvind4{
+.forsvind4 {
     animation-name: forsvind4;
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
 }
 
-@keyframes forsvind4{
+@keyframes forsvind4 {
 
-    0%{transform: translateX(48vw) translateY(23vw);
+    0% {
+        transform: translateX(48vw) translateY(23vw);
 
     }
 
-    100%{transform: translateY(-150vw)translateY(27vw);
+    100% {
+        transform: translateY(-150vw)translateY(27vw);
 
     }
 
@@ -231,23 +295,26 @@
     width: 5vw;
     height: 5vw;
     position: absolute;
-   transform: translateX(31vw) translateY(28vw) rotateZ(-70deg);
+    transform: translateX(31vw) translateY(28vw) rotateZ(-70deg);
 
 }
-.forsvind5{
+
+.forsvind5 {
     animation-name: forsvind5;
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
 }
 
-@keyframes forsvind5{
+@keyframes forsvind5 {
 
-    0%{transform: translateX(31vw) translateY(28vw);
+    0% {
+        transform: translateX(31vw) translateY(28vw);
 
     }
 
-    100%{transform: translateY(-150vw)translateY(27vw);
+    100% {
+        transform: translateY(-150vw)translateY(27vw);
 
     }
 
@@ -351,7 +418,7 @@
     }
 }
 
-#tillykke{
+#tillykke {
     background-image: url(produktion/tillykke.svg);
     background-size: 100%;
     width: 70vw;
@@ -362,7 +429,7 @@
     display: none;
 }
 
-#forlad1{
+#forlad1 {
     background-image: url(produktion/forlad.svg);
     background-size: 100%;
     width: 30vw;
@@ -372,7 +439,7 @@
     position: absolute;
 }
 
-#lyd_fra1{
+#lyd_fra1 {
     background-image: url(produktion/lyd_fra.svg);
     background-size: 100%;
     width: 45vw;
@@ -380,10 +447,10 @@
     left: 14vw;
     top: 20vw;
     position: absolute;
-/*    display: none;*/
+    /*    display: none;*/
 }
 
-#lyd_til1{
+#lyd_til1 {
     background-image: url(produktion/lyd_til.svg);
     background-size: 100%;
     width: 46vw;
@@ -394,7 +461,7 @@
     display: none;
 }
 
-#spil_igen1{
+#spil_igen1 {
     background-image: url(produktion/spil_igen.svg);
     background-size: 100%;
     width: 28.8vw;
@@ -404,7 +471,7 @@
     position: absolute;
 }
 
-#game_over1{
+#game_over1 {
     background-image: url(produktion/tillykke.svg);
     background-size: 100%;
     width: 70vw;
@@ -415,7 +482,7 @@
     display: none;
 }
 
-#forlad2{
+#forlad2 {
     background-image: url(produktion/forlad.svg);
     background-size: 100%;
     width: 30vw;
@@ -425,7 +492,7 @@
     position: absolute;
 }
 
-#lyd_fra2{
+#lyd_fra2 {
     background-image: url(produktion/lyd_fra.svg);
     background-size: 100%;
     width: 45vw;
@@ -433,10 +500,10 @@
     left: 14vw;
     top: 20vw;
     position: absolute;
-/*    display: none;*/
+    /*    display: none;*/
 }
 
-#lyd_til2{
+#lyd_til2 {
     background-image: url(produktion/lyd_til.svg);
     background-size: 100%;
     width: 46vw;
@@ -447,7 +514,7 @@
     display: none;
 }
 
-#spil_igen2{
+#spil_igen2 {
     background-image: url(produktion/spil_igen.svg);
     background-size: 100%;
     width: 28.8vw;
@@ -457,7 +524,7 @@
     position: absolute;
 }
 
-#game_over2{
+#game_over2 {
     background-image: url(produktion/tillykke.svg);
     background-size: 100%;
     width: 70vw;
@@ -468,7 +535,7 @@
     display: none;
 }
 
-#forlad3{
+#forlad3 {
     background-image: url(produktion/forlad.svg);
     background-size: 100%;
     width: 30vw;
@@ -478,7 +545,7 @@
     position: absolute;
 }
 
-#lyd_fra3{
+#lyd_fra3 {
     background-image: url(produktion/lyd_fra.svg);
     background-size: 100%;
     width: 45vw;
@@ -486,10 +553,10 @@
     left: 14vw;
     top: 20vw;
     position: absolute;
-/*    display: none;*/
+    /*    display: none;*/
 }
 
-#lyd_til3{
+#lyd_til3 {
     background-image: url(produktion/lyd_til.svg);
     background-size: 100%;
     width: 46vw;
@@ -500,7 +567,7 @@
     display: none;
 }
 
-#spil_igen3{
+#spil_igen3 {
     background-image: url(produktion/spil_igen.svg);
     background-size: 100%;
     width: 28.8vw;
@@ -509,5 +576,3 @@
     top: 29vw;
     position: absolute;
 }
-
-
