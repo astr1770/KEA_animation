@@ -107,9 +107,10 @@
     width: 30vw;
     height: 8vw;
     left: 34vw;
-    top: 20vw;
+    top: 22.5vw;
     position: absolute;
     display: none;
+
 }
 
 #lyd_fra {
@@ -120,7 +121,7 @@
     left: 30.5vw;
     top: 28vw;
     position: absolute;
-    display: none;
+
 }
 
 #lyd_til {
@@ -131,7 +132,29 @@
     left: 28.8vw;
     top: 25.1vw;
     position: absolute;
-    display: none;
+
+}
+
+#musik_fra {
+    background-image: url(produktion/musik_fra.svg);
+    background-size: 100%;
+    width: 45vw;
+    height: 10vw;
+    left: 30.5vw;
+    top: 28vw;
+    position: absolute;
+
+}
+
+#musik_til {
+    background-image: url(produktion/musik_til.svg);
+    background-size: 100%;
+    width: 46vw;
+    height: 13vw;
+    left: 28.8vw;
+    top: 25.1vw;
+    position: absolute;
+
 }
 
 #spil_igen {
@@ -143,8 +166,8 @@
     top: 37vw;
     position: absolute;
     display: none;
-}
 
+}
 
 #spille_baggrund {
     background-image: url(produktion/spille_baggrund.svg);
