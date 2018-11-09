@@ -1,0 +1,483 @@
+* {
+    -webkit-user-select: none;
+    /* Safari 3.1+ */
+    -moz-user-select: none;
+    /* Firefox 2+ */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Standard syntax */
+}
+
+html {
+    font-size: 2vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#screen {
+    position: relative;
+    width: 100vw;
+    height: 56.25;
+}
+
+#start {
+    position: absolute;
+    width: 100vw;
+    height: 56.25vw;
+    background-image: url(produktion/menu_baggrund.svg);
+    background-size: contain;
+}
+
+#play {
+    background-image: url(produktion/spil.svg);
+    background-size: 100%;
+    width: 33vw;
+    height: 20vw;
+    position: absolute;
+    left: 32vw;
+    top: 34vw;
+}
+
+/* effekter */
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.blur {
+    filter: blur(5px) brightness(80%);
+}
+
+.fade_out {
+    animation-name: fadeout_kf;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout_kf {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.pulse {
+    animation-name: pulse_kf;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(0.90);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#game_ui {
+    position: absolute;
+}
+
+#game_background {
+    position: absolute;
+    background-size: 100%;
+    width: 100vw;
+    height: 56.25vw;
+    background-image: url(produktion/spille_baggrund.svg);
+}
+
+
+#settings {
+    background-image: url(produktion/indstillinger.svg);
+    background-size: 100%;
+    width: 12vw;
+    height: 11vw;
+    position: absolute;
+    left: 88vw;
+    top: 45vw;
+}
+
+#settings_screen {
+    background-image: url(produktion/indstillinger_borad.svg);
+    background-size: 100%;
+    width: 90vw;
+    height: 60vw;
+    left: 6vw;
+    top: 2vw;
+    position: absolute;
+}
+
+#setting_close {
+    background-image: url(produktion/kryds.svg);
+    background-size: 100%;
+    width: 5vw;
+    height: 5vw;
+    left: 70vw;
+    top: 15vw;
+    position: absolute;
+
+}
+
+#sfx {
+    background-image: url(produktion/lyd.svg);
+    background-size: 100%;
+    width: 45vw;
+    height: 13vw;
+    left: 30vw;
+    top: 17vw;
+    position: absolute;
+
+}
+
+
+#music {
+    background-image: url(produktion/musik.svg);
+    background-size: 100%;
+    width: 45vw;
+    height: 10vw;
+    left: 30vw;
+    top: 30vw;
+    position: absolute;
+
+}
+
+#sfx_sprite,
+#music_sprite {
+    background-size: 500% 100%;
+    width: 12vw;
+    height: 12vw;
+    background-image: url(produktion/Toggle_sprite.svg);
+    display: inline-block;
+}
+
+#sfx h1,
+#music h1 {
+    display: inline-block;
+}
+
+
+.on {
+    background-position: 0;
+}
+
+.off {
+    background-position: -400% 0;
+}
+
+
+.off_on {
+    animation-name: on_off_kf;
+    animation-direction: reverse;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: steps(4);
+
+}
+
+.on_off {
+    animation-name: on_off_kf;
+    animation-duration: 0.1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: steps(4);
+}
+
+@keyframes on_off_kf {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -400% 0;
+    }
+}
+
+
+#time {
+    width: 5vw;
+    height: 6vw;
+    position: absolute;
+    left: 62.9vw;
+    top: 3.8vw;
+    font-size: 2vw;
+    color: whitesmoke
+}
+
+#replay {
+    background-image: url(produktion/spil_igen.svg);
+    background-size: 100%;
+    width: 28.8vw;
+    height: 8vw;
+    left: 31vw;
+    top: 37vw;
+    position: absolute;
+}
+
+
+#hund {
+    background-image: url(produktion/hund.svg);
+    background-size: 100%;
+    width: 34vw;
+    height: 30vw;
+    position: absolute;
+    left: 27vw;
+    top: 10.5vw;
+}
+
+#hor1,
+#hor2 {
+    width: 4vw;
+    height: 4vw;
+}
+
+#hor3,
+#hor4 {
+    width: 8vw;
+    height: 6vw;
+}
+
+#hor5,
+#hor6 {
+    width: 4vw;
+    height: 3vw;
+}
+
+#hor7,
+#hor8 {
+    width: 8vw;
+    height: 6vw;
+}
+
+.hor {
+    position: absolute;
+
+}
+
+
+#hor1 {
+    top: 20vw;
+    left: 36.5vw;
+    transform: rotate(180deg);
+}
+
+
+
+#hor2 {
+    transform: rotate(220deg);
+    top: 28vw;
+    left: 35vw;
+}
+
+#hor3 {
+    transform: rotate(50deg);
+    top: 15vw;
+    left: 45vw;
+}
+
+#hor4 {
+    top: 29vw;
+    left: 49vw;
+}
+
+#hor5 {
+    top: 25vw;
+    left: 49vw;
+}
+
+#hor6 {
+    transform: rotate(160deg);
+    top: 32vw;
+    left: 33vw;
+}
+
+#hor7 {
+    transform: rotate(70deg);
+    top: 26.5vw;
+    left: 43vw;
+}
+
+#hor8 {
+    transform: rotate(270deg);
+    top: 13vw;
+    left: 38vw;
+}
+
+.lys {
+    background-image: url(produktion/hor2.svg);
+    background-size: 100%;
+
+
+}
+
+.mork {
+    background-image: url(produktion/hor3.svg);
+    background-size: 100%;
+}
+
+
+#tunge {
+    background-image: url(produktion/tunge.svg);
+    background-size: 100%;
+    width: 7vw;
+    height: 5vw;
+    position: absolute;
+    left: 41.2vw;
+    top: 23.3vw;
+}
+
+#tander {
+    background-image: url(produktion/tander.svg);
+    background-size: 100%;
+    width: 10vw;
+    height: 3vw;
+    position: absolute;
+    left: 42vw;
+    top: 19vw;
+}
+
+#bryn {
+    background-image: url(produktion/bryn.svg);
+    background-size: 100%;
+    width: 9vw;
+    height: 3vw;
+    position: absolute;
+    left: 40vw;
+    top: 17vw;
+}
+
+#tid {
+    background-image: url(produktion/tid.svg);
+    background-size: 100%;
+    width: 35vw;
+    height: 7vw;
+    position: absolute;
+    left: 60vw;
+    top: 0vw;
+}
+
+#hjerte {
+    background-image: url(produktion/hjerte.svg);
+    background-size: 100%;
+    width: 9vw;
+    height: 7vw;
+    position: absolute;
+    left: 3vw;
+    top: 0.5vw;
+}
+
+#score {
+    width: 5vw;
+    height: 6vw;
+    position: absolute;
+    left: 6vw;
+    top: 2.5vw;
+    font-size: 3vw;
+}
+
+#kodben {
+    background-image: url(produktion/kodben.svg);
+    background-size: 100%;
+    width: 16vw;
+    height: 8vw;
+    position: absolute;
+    left: 35vw;
+    top: 47vw;
+}
+
+#tidslinje {
+    background-image: url(produktion/tidslinje.svg);
+    background-size: 100%;
+    width: 2vw;
+    height: 4.3vw;
+    left: 91vw;
+    top: 1.8vw;
+    position: absolute;
+}
+
+.slide {
+    animation-name: slide_kf;
+    animation-duration: 34s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+
+}
+
+@keyframes slide_kf {
+    0% {
+        transform: translateX(2vw)
+    }
+
+    100% {
+        transform: translateX(-25vw)
+    }
+}
+
+#levelcomplete {
+    background-image: url(produktion/tillykke.svg);
+    background-size: 100%;
+    width: 70vw;
+    height: 50vw;
+    left: 15vw;
+    top: 10vw;
+    position: absolute;
+}
+
+#gameover_screen1 {
+    background-image: url(produktion/game_over1.svg);
+    background-size: 100%;
+    width: 70vw;
+    height: 50vw;
+    left: 15vw;
+    top: 10vw;
+    position: absolute;
+    /*    z-index: 1000;*/
+}
+
+#gameover_screen2 {
+    background-image: url(produktion/game_over2.svg);
+    background-size: 100%;
+    width: 70vw;
+    height: 50vw;
+    left: 15vw;
+    top: 10vw;
+    position: absolute;
+}
+
+#forlad {
+    background-image: url(produktion/forlad.svg);
+    background-size: 100%;
+    width: 35vw;
+    height: 8vw;
+    left: -1vw;
+    top: -10vw;
+    position: absolute;
+}
+
+#info {
+    background-image: url(produktion/info.svg);
+    background-size: 100%;
+    width: 20vw;
+    height: 14vw;
+    left: 1vw;
+    top: 42vw;
+    position: absolute;
+}
