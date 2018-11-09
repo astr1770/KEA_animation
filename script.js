@@ -2,7 +2,7 @@ window.addEventListener("load", sidenVises);
 
 "use strict";
 let score = 0;
-let time = 30;
+let time = 20;
 let showSettingsEffektSound = true;
 let showSettingsMusic = true;
 let horCount = 0;
@@ -48,31 +48,15 @@ function hideStart() {
 
 }
 
-function timeLeft() {
-    if (time > 0) {
-        time--;
-        setTimeout(timeLeft, 1000);
-        document.querySelector("#time").innerHTML = time;
-    } else {
-        if (score > 7) {
-            levelComplete();
-        } else {
-            gameOver2();
-        }
-
-    }
-}
-
-
 function startGame() {
     console.log("startGame");
     document.querySelector("#start").removeEventListener("animationend", startGame);
     document.querySelector("#start").classList.remove("fade_out");
-    document.querySelector("#start").classList.add("hide");
-
+    document.querySelector("#start").classList.add("hide")
 
 
     timeLeft();
+    document.querySelector("#tidslinje").classList.add("slide");
 
     document.querySelector("#hor1").addEventListener("click", horClick);
     document.querySelector("#hor2").addEventListener("click", horClick);
@@ -86,23 +70,69 @@ function startGame() {
 
 }
 
+function timeLeft() {
+    if (time > 0) {
+        time--;
+        setTimeout(timeLeft, 1000);
+        document.querySelector("#time").innerHTML = time;
+    } else {
+        if (score > 18) {
+            levelComplete();
+        } else {
+            gameOver2();
+        }
+
+    }
+}
+
+
 function horClick() {
     console.log("horClick");
 
     this.classList.add("hide");
+    this.classList.add("hide_this");
+    this.addEventListener("animationend", showHor);
     score++;
     horCount++;
     if (horCount > 3) {
         gameOver1();
+    } else if (horCount == 0) {
+        horCount = 0;
+        document.querySelector("#tunge").classList.remove("hide");
+    } else if (horCount == 1) {
+        horCount = 1;
+        document.querySelector("#tunge").classList.remove("hide");
+    } else if (horCount == 2) {
+        horCount = 2;
+        document.querySelector("#tunge").classList.add("hide");
+        document.querySelector("#tander").classList.remove("hide");
+    } else if (horCount == 3) {
+        horCount = 3;
+        document.querySelector("#tunge").classList.add("hide");
+        document.querySelector("#bryn").classList.remove("hide");
     }
+
     document.querySelector("#score").innerHTML = "" + score;
     document.querySelector("#saks1").play();
+
+    // this.classList.remove("hide");
+
 
 
 }
 
+function showHor() {
+    console.log("showHor");
+    this.classList.remove("hide");
+    this.classList.remove("hide_this");
+    this.removeEventListener("animationend", showHor);
+}
+
 function resetHorCount() {
     horCount = 0;
+    document.querySelector("#tander").classList.add("hide");
+    document.querySelector("#tunge").classList.remove("hide");
+    document.querySelector("#bryn").classList.add("hide");
 }
 
 function showSettings() {
@@ -214,21 +244,43 @@ function gameOver1() {
     console.log("gameOver1")
     document.querySelector("#gameover_screen1").classList.remove("hide");
     document.querySelector("#replay").classList.remove("hide");
-    document.querySelector("#forlad").addEventListener('click', showStart);
-    document.querySelector("#replay").addEventListener('click', startGame);
+    document.querySelector("#forlad").addEventListener('click', forladClick);
+    document.querySelector("#replay").addEventListener('click', playAgain);
+    document.querySelector("#buhu").play();
 
 }
 
 function gameOver2() {
     document.querySelector("#gameover_screen2").classList.remove("hide");
+    document.querySelector("#gameover_screen1").classList.add("hide");
     document.querySelector("#replay").classList.remove("hide");
-    document.querySelector("#forlad").addEventListener('click', showStart);
-    document.querySelector("#replay").addEventListener('click', startGame);
+    document.querySelector("#forlad").addEventListener('click', forladClick);
+    document.querySelector("#replay").addEventListener('click', playAgain);
+    document.querySelector("#buhu").play();
+
 }
 
 function levelComplete() {
     document.querySelector("#levelcomplete").classList.remove("hide");
     document.querySelector("#replay").classList.remove("hide");
-    document.querySelector("#forlad").addEventListener('click', showStart);
-    document.querySelector("#replay").addEventListener('click', startGame);
+    document.querySelector("#forlad").addEventListener('click', forladClick);
+    document.querySelector("#replay").addEventListener('click', playAgain);
+    document.querySelector("#yay").play();
+}
+
+function forladClick() {
+    document.querySelector("#forlad").removeEventListener('click', forladClick);
+    window.location.reload();
+    showStart();
+}
+
+function playAgain() {
+    console.log("playAgain")
+    document.querySelector("#replay").removeEventListener('click', playAgain);
+    document.querySelector("#gameover_screen2").classList.add("hide");
+
+    timeLeft = 20;
+    score = 0;
+    startGame();
+
 }
